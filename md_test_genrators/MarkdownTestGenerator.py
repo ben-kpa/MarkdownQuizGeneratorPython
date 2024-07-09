@@ -11,7 +11,7 @@ def print_instructions():
     1. When you run this script, a file dialog will open. Select the Markdown file you want to process.
     2. The script will extract lines starting with '# ' (H1 headers) and '## ' (H2 headers), 
        as well as lines following an '## ' header until another header is encountered.
-    3. The processed content will be saved to a new file with '_test_' followed by the current timestamp appended to the original file name.
+    3. The processed content will be saved to a new file with '_quiz_' followed by the current timestamp appended to the original file name.
     4. The new file will be saved in the same directory as the original file.
 
     Note:
@@ -67,7 +67,7 @@ def process_markdown(input_file):
     if previous_was_h2:
         selected_lines.append("### try:\n\n\n")
 
-    output_file = f"{os.path.splitext(input_file)[0]}_test_{get_current_datetime()}.md"
+    output_file = f"{os.path.splitext(input_file)[0]}_quiz_{get_current_datetime()}.md"
 
     try:
         with open(output_file, 'w', encoding='utf-8') as outfile:

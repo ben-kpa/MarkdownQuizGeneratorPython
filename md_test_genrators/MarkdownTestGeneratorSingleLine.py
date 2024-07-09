@@ -12,7 +12,7 @@ def print_instructions():
     2. The script will ignore lines starting with '# ' (H1 headers) and '## ' (H2 headers), 
        but it will extract lines following an '## ' header until another header is encountered.
     3. The lines after each '## ' header will be combined into a single line separated by a space ' '.
-    4. The processed content will be saved to a new file with '_test_' followed by the current timestamp appended to the original file name.
+    4. The processed content will be saved to a new file with '_quiz_' followed by the current timestamp appended to the original file name.
     5. The new file will be saved in the same directory as the original file.
 
     Note:
@@ -66,7 +66,7 @@ def process_markdown(input_file):
     if current_section:
         selected_lines.append(joinString.join(current_section))
 
-    output_file = f"{os.path.splitext(input_file)[0]}_test_{get_current_datetime()}.md"
+    output_file = f"{os.path.splitext(input_file)[0]}_quiz_{get_current_datetime()}.md"
 
     try:
         with open(output_file, 'w', encoding='utf-8') as outfile:
