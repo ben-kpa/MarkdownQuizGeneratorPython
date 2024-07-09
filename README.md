@@ -1,4 +1,4 @@
-# Markdown Test Generator README
+# Markdown Quiz Generator README
 
 ## Overview
 
