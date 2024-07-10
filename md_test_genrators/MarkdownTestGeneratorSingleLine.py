@@ -77,10 +77,9 @@ def process_markdown(input_file):
     except IOError:
         print("Could not create the output file!")
 
-if __name__ == "__main__":
-    print_instructions()
-    file_path = open_file_dialog()
-    if not file_path:
-        print("No file selected!")
-    else:
-        process_markdown(file_path)
+print_instructions()
+file_path = open_file_dialog()
+if not file_path:
+    print("No file selected!")
+else:
+    process_markdown(file_path)
